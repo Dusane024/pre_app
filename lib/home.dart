@@ -57,24 +57,30 @@ class _HomeState extends State<Home> {
         itemBuilder: (context, index) {
           final item = items[index];
           return Card(
-clipBehavior:Clip.antiAlias ,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            child: GridTile(
-              child: Image.network(item.image),
-              header: Container(
-                child: Text(item.name,style: TextStyle(color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),),
-                decoration: BoxDecoration(color: Colors.black),
-              ),
-              footer: Text("\$"+item.price.toString(),style: TextStyle(color: Colors.blue,
-          fontWeight: FontWeight.bold,
-          fontSize: 20
-              ),
-            ),
-          ));
+              clipBehavior: Clip.antiAlias,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
+              child: GridTile(
+                child: Image.network(item.image),
+                header: Container(
+                  child: Text(
+                    item.name,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  decoration: BoxDecoration(color: Colors.black),
+                ),
+                footer: Text(
+                  "\$" + item.price.toString(),
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+              ));
         },
         itemCount: items.length,
       ),
